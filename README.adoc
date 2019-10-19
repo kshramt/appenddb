@@ -1,0 +1,1 @@
+image:https://travis-ci.com/kshramt/appenddb.svg?branch=master["Build Status", link="https://travis-ci.com/kshramt/appenddb"]
