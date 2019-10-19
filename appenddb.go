@@ -32,13 +32,14 @@ func NewV1(path string) (*AppendDbV1, error) {
 }
 
 func (ad *AppendDbV1) Close() error {
-	err := ad.fp_index.Close()
-	if err != nil {
-		return err
+	// todo: improve.
+	err_index := ad.fp_index.Close()
+	err_data := ad.fp_data.Close()
+	if err_index != nil {
+		return err_index
 	}
-	err = ad.fp_data.Close()
-	if err != nil {
-		return err
+	if err_data != nil {
+		return err_data
 	}
 	return nil
 }
