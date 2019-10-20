@@ -19,6 +19,7 @@ func Test1(t *testing.T) {
 		if err != nil {
 			t.Error(err)
 		}
+		defer ad.Close()
 		l, err := ad.Len()
 		if err != nil {
 			t.Error(err)
@@ -85,6 +86,7 @@ func Test1(t *testing.T) {
 		if err != nil {
 			t.Error(err)
 		}
+		defer ad.Close()
 		l, err := ad.Len()
 		if err != nil {
 			t.Error(err)
